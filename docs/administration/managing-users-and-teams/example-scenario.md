@@ -27,9 +27,11 @@ This is the list of permissions we will assign to this role.
 - VariableView
 - VariableViewUnscoped
 
+:::hint
 This can be simplified by using the following [built-in user roles](https://octopus.com/docs/administration/managing-users-and-teams/user-roles).
 Project Deployer - All project contributor permissions, plus: deploying releases, but not creating them.
 Project Lead - All project contributor permissions, plus: creating releases, but not deploying them.
+:::
 
 2. In this scenario, we don't already have a unique user, so we'll create one in *Configuration > Users*
 
