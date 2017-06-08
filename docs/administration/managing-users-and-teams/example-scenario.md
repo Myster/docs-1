@@ -1,32 +1,42 @@
 ### Example Scenario
-We have a team that should be dedicated to a specific project. They should be able to create and edit anything to do with this project (i.e. deployment process, variables, channels, etc.). To accomplish this, this guide will walk through the following steps.
+We have a team that should be dedicated to a specific project. They should be able to create and edit anything to do with this project (i.e. deployment process, variables, channels, etc.). To accomplish this, we'll follow these steps.
 
-1. Create a custom role
-2. Create a new user
-2. Create a new team to assign this role and user to
+1. Create a custom role and assign it specific permissions. We can also use built-in user roles as shown in our [User Roles page](https://octopus.com/docs/administration/managing-users-and-teams/user-roles).
+2. Create a new user.
+2. Create a new team, scoping it to a specific project, and assign this new role and user to it.
 
 ### Process
 
-1. Let's start off by creating the custom role. You will need the following permissions to allow full control of projects. (We can limit which projects as shown in a later step).
+1. Let's start off by creating the custom role and giving it the following permissions. This will by default give access to all projects. We'll scope the team to our single project in a later step.
 
-Environment view
-Environment manager
-Project view
-Project manager
+This is the list of permissions we will assign to this role.
 
-Your custom role should look something like the following.
+- EnvironmentView
+- ProcessEdit
+- ProcessView
+- ProjectEdit
+- ProjectView
+- ReleaseCreate
+- ReleaseDelete
+- ReleaseEdit
+- ReleaseView
+- TriggerEdit
+- TriggerView
+- VariableEdit
+- VariableEditUnscoped
+- VariableView
+- VariableViewUnscoped
 
-[image]
+2. In this scenario, we don't already have a unique user, so we'll create one in *Configuration > Users*
 
-2. Now let's create our new user. Here, you assign this user the usual username, password and email address.
-*Configuration > Users*
+![Adding a new user](new_user.png)
 
-3. Let's create a new team to assign our new role to.
+3. Now let's create a new team to assign our role and user to. We'll give it the same name as the project these users will have access to. We'll also scope our team to a specific project.
 
-[image]
+![Adding a new team](new_team.png)
 
-This will allow users in this team to be able to edit all projects. We can then scope this team to specific projects.
+Now let's look at the results from this new user's perspective. You'll see that they can view all of the environments, but they can only see the specific project.
 
-[image]
+![Developer's perspective](Developer_dashboard.png)
 
-I hope this provides some good insight as to how permissions, roles and teams work together, and shows the potential to how granular these permissions can be in limiting permissions to your users.
+I hope this provides some good insight as to how permissions, roles and teams work together. Considering the other scoping options available which we haven't used, you can see the potential of how granular you can define permissions for your users.
