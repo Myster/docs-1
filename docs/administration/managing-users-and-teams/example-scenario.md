@@ -9,6 +9,8 @@ We have a team that should be dedicated to a specific project. They should be ab
 
 1. Let's start off by creating the custom role and giving it the following permissions. This will by default give access to all projects. We'll scope the team to our single project in a later step.
 
+![Adding a new role](new_role.png)
+
 This is the list of permissions we will assign to this role.
 
 - EnvironmentView
