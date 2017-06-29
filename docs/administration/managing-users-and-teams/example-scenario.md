@@ -47,4 +47,20 @@ Now let's look at the results from this new user's perspective. You'll see that 
 
 ![Developer's perspective](Developer_dashboard.png)
 
+Looking at the project variables, they are able to view and edit variables scoped to any environment, including unscoped variables.
+
+![Project variables](Project_Variables.png)
+
+Additionally, you can limit view and edit permissions for this user by scoping their team to one or more environments. The user will then only be permissed to access variables scoped to those defined environments.
+
+![Scoping team to environment](Team_Environment_Scope.png)
+
+Jump back in to the project variables screen with this user to see this change in action. Notice now that this user can *only* access unscoped variables and variables scoped to the Development environment.
+
+![Project variables scoped](Project_Variables_Scoped.png)
+
+:::hint
+VariableViewUnscoped and VariableEditUnscoped lie outside of the team's environment scoping. To restrict access to unscoped variables, remove these specific permissions.
+:::
+
 I hope this provides some good insight as to how permissions, roles and teams work together. Considering the other scoping options available which we haven't used, you can see the potential of how granular you can define permissions for your users.
