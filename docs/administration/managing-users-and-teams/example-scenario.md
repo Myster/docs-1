@@ -1,9 +1,16 @@
+This page is designed to be an introduction to using permissions with Octopus, and how permissions, roles and teams work together in allowing users access to appropriate information. It's commonly a little confusing at first as the control you have is so granular, but the concept can be simplified to this.
+
+- Permissions are given to a role
+- A role is assigned to a team
+- A team is scoped to projects, project groups and/or environments
+
 ### Example Scenario
+
 We have a team that should be dedicated to a specific project. They should be able to create and edit anything to do with this project (i.e. deployment process, variables, channels, etc.). To accomplish this, we'll follow these steps.
 
-1. Create a custom role and assign it specific permissions. We can also use built-in user roles as shown in our [User Roles page](https://octopus.com/docs/administration/managing-users-and-teams/user-roles).
-2. Create a new user.
-2. Create a new team, scoping it to a specific project, and assign this new role and user to it.
+1. Create a user.
+2. Create a custom role and assign it specific permissions. We can also use built-in user roles as shown in our [User Roles page](https://octopus.com/docs/administration/managing-users-and-teams/user-roles).
+2. Create a new team, scope it to a specific project, and assign this new role and user to it.
 
 ### Process
 
