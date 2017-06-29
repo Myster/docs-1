@@ -7,7 +7,11 @@ We have a team that should be dedicated to a specific project. They should be ab
 
 ### Process
 
-1. Let's start off by creating the custom role and giving it the following permissions. This will by default give access to all projects. We'll scope the team to our single project in a later step.
+1. First, we'll create a new user in *Configuration > Users* page in the web portal.
+
+![Adding a new user](new_user.png)
+
+2. We'll then create a custom role and giving it the following permissions. This will by default give access to all projects. We'll scope the team to our single project in the next step.
 
 ![Adding a new role](new_role.png)
 
@@ -34,10 +38,6 @@ This can be simplified by using the following [built-in user roles](https://octo
 Project Deployer - All project contributor permissions, plus: deploying releases, but not creating them.
 Project Lead - All project contributor permissions, plus: creating releases, but not deploying them.
 :::
-
-2. In this scenario, we don't already have a unique user, so we'll create one in *Configuration > Users*
-
-![Adding a new user](new_user.png)
 
 3. Now let's create a new team to assign our role and user to. We'll give it the same name as the project these users will have access to. We'll also scope our team to a specific project.
 
